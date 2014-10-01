@@ -1,0 +1,87 @@
+/* 
+Globals
+	Sass variable, mixins, plugins, etc. that are used throughout the entore site.
+*/
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+// Loading Google Fonts
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(http://fonts.gstatic.com/s/josefinsans/v8/C6HYlRF50SGJq1XyXj04z0ZRWJQ0UjzR2Uv6RollX_g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Sans'), local('JosefinSans'), url(http://fonts.gstatic.com/s/josefinsans/v8/xgzbb53t8j-Mo-vYa23n5hampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(http://fonts.gstatic.com/s/josefinsans/v8/C6HYlRF50SGJq1XyXj04z8hHwsiXhsDb0smKjAA7Bek.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Josefin Sans Italic'), local('JosefinSans-Italic'), url(http://fonts.gstatic.com/s/josefinsans/v8/q9w3H4aeBxj0hZ8Osfi3d2frnYWAzH6tTbHZfcsRIsM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Montaga';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montaga'), local('Montaga-Regular'), url(http://fonts.gstatic.com/s/montaga/v4/itGvBFnaX977w123U-9KmlKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@mixin body-font-regular {
+    font-family: 'Josefin Sans', helvetica, verdana, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+@mixin body-font-italic {
+    font-family: 'Josefin Sans', helvetica, verdana, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@mixin body-font-bold {
+    font-family: 'Josefin Sans', helvetica, verdana, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin headline-font {
+    font-family: 'Montaga', helvetica, verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+// Site Variables
+$color: #242424;
+$background-color: #e6e6e6;
+                                                                              
+
